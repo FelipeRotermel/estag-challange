@@ -1,0 +1,180 @@
+.Container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    clear: both;
+    width: 100%;
+}
+
+.Column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 9vh;
+}
+
+.Line {
+    border-left: 1px rgba(77, 77, 77, 0.445) solid;
+    height: 85vh;
+}
+
+input {
+    font-size: 15px;
+    background-color: rgba(243, 243, 243, 0.5);
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 4px;
+    margin-right: 5px;
+}
+
+.ProductsDeleteButton {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+.ProductsAddButton {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bolder;
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    background-color: rgb(43, 255, 0);
+    border-radius: 5px;
+}
+
+.ProductsTable {
+    border-collapse: collapse;
+    border-left: 2px solid white;
+    height: 10%;
+}
+
+.ProductsTableItems th, .ProductsTableItems td, .HomeProductsItemsTable td, .CartProductsItems td{
+    border-bottom: 1px solid rgba(77, 77, 77, 0.445);
+    border-left: 1px solid rgba(77, 77, 77, 0.445);
+    padding: 10px;
+}
+
+.Product {
+    width: 70vh;
+    text-align: start;
+}
+
+.Others {
+    width: 10vh;
+    text-align: start;
+}
+
+.Payment {
+    position: fixed;
+    width: 25%;
+    right: 0;
+    bottom: 0;
+    padding-bottom: 30px;
+}
+
+.Payment table {
+    margin-left: 55%;
+}
+
+.PaymentButtons {
+    display: inline;
+}
+
+.PaymentButtonCancel {
+    width: 40%;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 40px;
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+.PaymentButtonFinish {
+    width: 40%;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 40px;
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    background-color: rgb(123, 93, 255);
+    border-radius: 5px;
+}
+
+.quantity {
+    width: 35px;
+    text-align: center;
+    border: 0;
+  }
+  
+.quantity[type=number]::-webkit-inner-spin-button, .quantity[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+  
+.number-input {
+    display: flex;
+}
+
+.number-input button {
+    font-weight: bolder;
+    outline:none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.ColumnFilter{
+    filter: blur(4px);
+}
+
+.ConfirmationPayment {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30vh;
+    padding: 100px;
+    background-color: rgb(123, 93, 255);
+    border-radius: 10px;
+}
+
+.table-cancel-btn {
+    width: 30%;
+    font-size: 25px;
+    font-weight: bolder;
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    background-color: rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+.table-finish-btn {
+    width: 30%;
+    font-size: 25px;
+    font-weight: bolder;
+    border: 1px rgba(77, 77, 77, 0.445) solid;
+    background-color: rgb(43, 255, 0);
+    border-radius: 5px;
+}
+
+.PaymentPurchase {
+    position: fixed;
+    width: 50%;
+    right: 0;
+    bottom: 0;
+}
+
+.PaymentPurchase table {
+    margin-left: 55%;
+}
+
+.PaymentPurchaseButtons {
+    display: inline;
+}

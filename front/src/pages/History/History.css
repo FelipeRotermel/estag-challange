@@ -1,0 +1,78 @@
+.ContainerHistory {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    clear: both;
+    width: 100%;
+}
+
+.ColumnHistory {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Column h2 {
+    margin-bottom: 2vh;
+}
+
+.HistoryTable {
+    border: 2px rgba(77, 77, 77, 0.445) solid;
+    border-radius: 5px;
+    width: 40%;
+}
+
+.HistoryTableItems tr{
+    height: 30px;
+}
+
+.HistoryTableItems tr td {
+    border-bottom: 2px solid rgba(77, 77, 77, 0.445);
+    padding: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 38vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-tbody tr td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
+    border-left: 1px solid rgba(0, 0, 0, 0.445);
+    padding: 20px;
+}
+
+.Item {
+    width: 100px;
+}

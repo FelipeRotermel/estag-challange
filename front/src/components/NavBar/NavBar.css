@@ -1,0 +1,38 @@
+.NavBar {
+    display: flex;
+    background-color: rgb(123, 93, 255);
+    height: 7vh;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.NavBarLinks {
+    display: inline;
+}
+
+.NavBarLink{
+    display: inline;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.Logo {
+    font-size: 40px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 30px;
+    color: black;
+}
+
+.NavBarLink a, .NavBar a {
+    text-decoration: none;
+    transition: 0.25s;
+    color: black;
+}
+
+.NavBarLink a:hover, .NavBar a:hover {
+    color: white;
+}

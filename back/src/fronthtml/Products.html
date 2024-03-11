@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Products</title>
+</head>
+<body>
+    
+    <nav class="NavBar">
+        <a class="Logo" href="index.html">Suite Store</a>
+        <ul class="NavBarLinks">
+            <li class="NavBarLink"><a href="Products.html">Products</a></li>
+            <li class="NavBarLink"><a href="Categories.html">Categories</a></li>
+            <li class="NavBarLink"><a href="History.html">History</a></li>
+        </ul>
+    </nav>
+    <div class="Container">
+        <form class="Column" action="http://localhost/routes/products.php" method="POST">
+            <input 
+                type="hidden" 
+                name="action" 
+                value="post">
+            <input 
+                placeholder="Product Name" 
+                class="ProductNameInput" 
+                pattern="[a-zA-Z0-9]+"
+                maxlength="60" 
+                name="name" 
+                type="text" 
+                id="name"
+                required
+            >
+            <br>
+            <input 
+                class="ProductAmountInput" 
+                placeholder="Amount" 
+                pattern="[0-9]+"
+                type="number" 
+                name="amount" 
+                id="amount" 
+                max="9999" 
+                required
+                min="1"
+            >
+            <input 
+                placeholder="Price" 
+                pattern="[0-9]+"
+                type="number" 
+                name="price" 
+                id="price" 
+                max="9999" 
+                required
+                min="1"
+            >
+            <select class="ProductSelectInput" id="category" name="category_code">
+                <!-- Renderização das opções de categorias -->
+            </select>
+            <br>
+            <button class="ProductsButton" type="submit">Enviar</button>
+        </form>
+        <div class="Column Line">
+            <table class="ProductsTable">
+                <thead class="ProductsTableItems">
+                    <th class="ID">ID</th>
+                    <th class="Product">Product</th>
+                    <th class="Others">Amount</th>
+                    <th class="Others">Unit Price</th>
+                    <th class="Others">Category</th>
+                    <th class="Others">Action</th>
+                </thead>
+                <tbody class="ProductsTableCategoryItems">
+                    <!-- Renderização da lista -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+        /* Verificações de inputs */
+        window.onload = () => {
+
+            renderCategories();
+            renderProducts();
+        
+            const text = [...document.querySelectorAll('input[type="text"]')];
+        
+            /* Desabilitar caracteres especiais */
+            for(let i = 0; i < text.length; i++){
+                text[i].onpaste = event => {
+                    event.preventDefault();
+                    return false;
+                }
+                text[i].onkeypress = function(event) {
+                    const chr = String.fromCharCode(event.which);
+                    if ("qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM1234567890".indexOf(chr) < 0)
+                      return false;
+                };
+            }
+        };
+
+        function renderCategories() {
+            fetch("http://localhost/routes/categories.php?action=get",).then(response => response.json()).then((data) => {
+
+                let select = document.getElementById('category');
+                data.forEach(category => {
+
+                    /* Verifica se o nome contém caracteres especiais */
+                    let specialChars = /[!@#$%^&*()_+={}\[\]:;<>,.?~]/;
+                    if (specialChars.test(category.name)) {
+                        return;
+                    }
+
+                    let option = document.createElement("option");
+                    option.value = JSON.stringify(category.code);
+                    option.innerText = JSON.stringify(category.name).replace(/"/g, "");
+                    select.append(option);
+                })
+            })
+        }
+
+        /* Função para renderizar os Produtos */
+        function renderProducts() {
+            document.querySelector(".ProductsTableCategoryItems").innerText = "";
+            fetch("http://localhost/routes/products.php?action=get",).then(response => response.json()).then((data) => {
+
+                data.forEach(product => {
+
+                    /* Verifica se o nome contém caracteres especiais */
+                    let specialChars = /[!@#$%^&*()_+={}\[\]:;<>,.?~]/;
+                    if (specialChars.test(product.productname)) {
+                        return;
+                    }
+
+                    let tbody = document.querySelector(".ProductsTableCategoryItems");
+                    let trow = document.createElement("tr");
+                    trow.innerHTML =
+                    `  
+                        <td>${product.productcode}</td>
+                        <td>${product.productname}</td>
+                        <td>${product.amount}</td>
+                        <td class="inputWithButton"><input type="number" min="${product.amount}"><button onclick="Edit()">Edit</button> </td>
+                        <td>${product.price}</td>
+                        <td>${product.categoryname}</td>
+                        <td><button class="ProductsDeleteButton" onclick="deleteProduct(); location.href='http://localhost/routes/products.php?action=delete&code=${product.productcode}'">Delete</button></td>
+                    `;
+                    tbody.append(trow)
+                })
+            })
+        }
+
+        function Edit() {
+            let tr = event.target.parentElement.parentElement;
+            let code = tr.children[0].innerText;
+            console.log(code)
+            let inputValue = tr.children[3].children[0].value;
+ 
+            if(inputValue < 0) {
+                alert("Amount must be greater than 0")
+                return;
+            }
+           
+            location.href=`http://localhost/routes/products.php?action=update&code=${code}&amount=${inputValue}`
+        }
+
+    </script>
+
+</body>
+</html>
