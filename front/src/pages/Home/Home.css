@@ -1,53 +1,3 @@
-.Container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    clear: both;
-    width: 100%;
-}
-
-.Column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    margin-top: 9vh;
-}
-
-.Line {
-    border-left: 1px rgba(77, 77, 77, 0.445) solid;
-    height: 85vh;
-}
-
-input {
-    font-size: 15px;
-    background-color: rgba(243, 243, 243, 0.5);
-    border: 1px rgba(77, 77, 77, 0.445) solid;
-    padding: 5px;
-    border-radius: 5px;
-    margin-left: 4px;
-    margin-right: 5px;
-}
-
-.ProductsDeleteButton {
-    width: 100%;
-    font-size: 15px;
-    font-weight: bolder;
-    border: 1px rgba(77, 77, 77, 0.445) solid;
-    background-color: rgb(255, 0, 0);
-    border-radius: 5px;
-}
-
-.ProductsAddButton {
-    width: 100%;
-    font-size: 15px;
-    font-weight: bolder;
-    border: 1px rgba(77, 77, 77, 0.445) solid;
-    background-color: rgb(43, 255, 0);
-    border-radius: 5px;
-}
-
 .ProductsTable {
     border-collapse: collapse;
     border-left: 2px solid white;
@@ -58,16 +8,6 @@ input {
     border-bottom: 1px solid rgba(77, 77, 77, 0.445);
     border-left: 1px solid rgba(77, 77, 77, 0.445);
     padding: 10px;
-}
-
-.Product {
-    width: 70vh;
-    text-align: start;
-}
-
-.Others {
-    width: 10vh;
-    text-align: start;
 }
 
 .Payment {
@@ -87,27 +27,48 @@ input {
 }
 
 .PaymentButtonCancel {
-    width: 40%;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    border: 0;
+    border-radius: 100px;
+    color: #ffffff;
+    display: inline-flex;
     font-size: 20px;
-    font-weight: bolder;
-    margin-top: 40px;
-    border: 1px rgba(77, 77, 77, 0.445) solid;
-    background-color: rgb(211, 211, 211);
-    border-radius: 5px;
+    font-weight: 700;
+    min-height: 40px;
+    min-width: 0px;
+    padding-left: 15%;
+    padding-right: 15%;
+    transition: 0.2s;
+}
+
+.PaymentButtonCancel:hover {
+    background-color: rgba(119, 18, 18, 0.788);
 }
 
 .PaymentButtonFinish {
-    width: 40%;
-    font-size: 20px;
-    font-weight: bolder;
-    margin-top: 40px;
-    border: 1px rgba(77, 77, 77, 0.445) solid;
+    align-items: center;
     background-color: rgb(123, 93, 255);
-    border-radius: 5px;
+    border: 0;
+    border-radius: 100px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 20px;
+    font-weight: 700;
+    min-height: 40px;
+    min-width: 0px;
+    padding-left: 15%;
+    padding-right: 15%;
+    transition: 0.2s;
+}
+
+.PaymentButtonFinish:hover {
+    background-color: rgba(18, 62, 119, 0.788);
 }
 
 .quantity {
-    width: 35px;
+    width: 3rem;
+    height: 2.5rem;
     text-align: center;
     border: 0;
   }
@@ -143,7 +104,10 @@ input {
     margin-top: 30vh;
     padding: 100px;
     background-color: rgb(123, 93, 255);
-    border-radius: 10px;
+    border: 0;
+    border-radius: 20px;
+    color: #ffffff;
+    transition: 0.2s;
 }
 
 .table-cancel-btn {
@@ -152,7 +116,11 @@ input {
     font-weight: bolder;
     border: 1px rgba(77, 77, 77, 0.445) solid;
     background-color: rgb(255, 0, 0);
-    border-radius: 5px;
+    border-radius: 100px;
+    color: #ffffff;
+    padding-left: 15%;
+    padding-right: 30%;
+    transition: 0.2s;
 }
 
 .table-finish-btn {
@@ -161,7 +129,11 @@ input {
     font-weight: bolder;
     border: 1px rgba(77, 77, 77, 0.445) solid;
     background-color: rgb(43, 255, 0);
-    border-radius: 5px;
+    color: #ffffff;
+    border-radius: 100px;
+    padding-left: 15%;
+    padding-right: 30%;
+    transition: 0.2s;
 }
 
 .PaymentPurchase {

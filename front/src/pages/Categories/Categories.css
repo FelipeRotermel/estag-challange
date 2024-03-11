@@ -1,29 +1,8 @@
-.Container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    clear: both;
-    width: 100%;
-}
-
-.Column {
-    float: left;
-    width: 50%;
-    padding: 10px;
-    text-align: center;
-    margin-top: 9vh;
-}
-
-.Line {
-    border-left: 1px rgba(77, 77, 77, 0.445) solid;
-    height: 85vh;
-}
-
-input {
+.CategoryNameInput, .CategoryTaxInput {
     font-size: 15px;
     background-color: rgba(243, 243, 243, 0.5);
     border: 1px rgba(77, 77, 77, 0.445) solid;
+    border-radius: 100px;
     padding: 5px;
     border-radius: 5px;
     margin-left: 4px;
@@ -40,43 +19,4 @@ input {
     border-bottom: 1px solid rgba(77, 77, 77, 0.445);
     border-left: 1px solid rgba(77, 77, 77, 0.445);
     padding: 10px;
-}
-
-.Product {
-    width: 70vh;
-    text-align: start;
-}
-
-.Others {
-    width: 10vh;
-    text-align: start;
-}
-
-.CategoryNameInput {
-    width: 41.5%;
-    margin: 20px;
-}
-
-.CategoryTaxInput {
-    width: 41.5%;
-    margin: 20px;
-}
-
-.AddCategoryButton {
-    width: 90.6%;
-    font-size: 20px;
-    font-weight: bolder;
-    margin-top: 20px;
-    border: 1px rgba(77, 77, 77, 0.445) solid;
-    background-color: rgb(123, 93, 255);
-    border-radius: 5px;
-}
-
-.RemoveCategoryButton {
-    width: 100%;
-    font-size: 15px;
-    font-weight: bolder;
-    border: 1px rgba(77, 77, 77, 0.445) solid;
-    background-color: rgb(255, 0, 0);
-    border-radius: 5px;
 }

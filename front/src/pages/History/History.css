@@ -1,4 +1,4 @@
-.ContainerHistory {
+.HistoryContainer {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.ColumnHistory {
+.HistoryColumn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,21 +19,49 @@
 }
 
 .HistoryTable {
-    border: 2px rgba(77, 77, 77, 0.445) solid;
-    border-radius: 5px;
     width: 40%;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.HistoryTableInfo {
+    background-color: rgb(123, 93, 255);
+}
+
+.HistoryTableInfo tr {
+    height: 30px;
+}
+
+.HistoryTableInfo tr th {
+    color: #ffffff;
+    padding: 10px;
 }
 
 .HistoryTableItems tr{
     height: 30px;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.HistoryTableItems tr:nth-of-type(even){
+    background-color: #f3f3f38c;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.HistoryTableItems tr:hover{
+    background-color: #5e5e5e33;
+    padding: 10px;
+    color: #000000;
 }
 
 .HistoryTableItems tr td {
-    border-bottom: 2px solid rgba(77, 77, 77, 0.445);
     padding: 10px;
 }
 
-.modal {
+.HistoryModal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -46,33 +74,74 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
+.HistoryModalContent {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: max-content;
 }
 
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
+.HistoryClose {
+    font-size: 31px;
     font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgb(255, 0, 0);
 }
 
-.close:hover, .close:focus {
+.HistoryClose:hover, .HistoryClose:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-#modal-tbody tr td {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.445);
-    border-left: 1px solid rgba(0, 0, 0, 0.445);
-    padding: 20px;
+.HistoryModalContentHead {
+    background-color: rgb(123, 93, 255);
 }
 
-.Item {
+.HistoryModalContentHead tr {
+    height: 30px;
+}
+
+.HistoryModalContentHead tr th {
+    color: #ffffff;
+    padding: 10px;
+}
+
+.HistoryModalContentItems tr {
+    height: 50px;
+    color: #ffffff;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.HistoryModalContentItems tr:nth-of-type(even){
+    background-color: #f3f3f38c;
+    padding: 10px;
+    color: #ffffff;
+}
+
+
+.HistoryItem {
     width: 100px;
+}
+
+.HistoryViewButton {
+    align-items: center;
+    background-color: rgb(123, 93, 255);
+    border: 0;
+    border-radius: 100px;
+    color: #ffffff;
+    display: inline-flex;
+    font-weight: 600;
+    min-height: 40px;
+    min-width: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.2s;
+}
+
+.HistoryViewButton:hover {
+    background-color: rgba(18, 62, 119, 0.788);
 }
