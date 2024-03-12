@@ -1,29 +1,60 @@
 .ProductsTable {
-    border-collapse: collapse;
-    border-left: 2px solid white;
-    height: 10%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 100%;
 }
 
-.ProductsTableItems th, .ProductsTableItems td, .HomeProductsItemsTable td, .CartProductsItems td{
-    border-bottom: 1px solid rgba(77, 77, 77, 0.445);
-    border-left: 1px solid rgba(77, 77, 77, 0.445);
+.HomeProductsTableThead {
+    background: linear-gradient(90deg, rgb(123, 93, 255), rgb(176, 159, 255));
+}
+
+.HomeProductsTableThead tr th {
+    height: 5vh;
+    color: #ffffff;
+}
+
+.HomeProductsTableTbody {
+    border-radius: 0 0 10px 10px;
+    background: #ffffff;
+}
+
+.HomeProductsTableTbody tr td {
+    height: 5vh;
+}
+
+.HomeProductsTableTbody tr:nth-of-type(even){
+    background-color: #f3f3f3da;
     padding: 10px;
+    color: #ffffff;
+    transition: 0.2s;
+    align-items: center;
+}
+
+.HomeProductsTableTbody tr:hover{
+    background-color: #5e5e5e33;
 }
 
 .Payment {
     position: fixed;
-    width: 25%;
+    display: grid;
+    width: 30%;
     right: 0;
     bottom: 0;
-    padding-bottom: 30px;
+    padding-bottom: 4vh;
 }
 
-.Payment table {
-    margin-left: 55%;
+.PaymentTable {
+    float: right;
+    margin-left: 16vw;
 }
 
-.PaymentButtons {
-    display: inline;
+.PaymentTablePurchase {
+    float: left;
+    margin-left: 5vw;
+}
+
+.Tax, .Total {
+    float: left;
+    margin-right: 2vw;
 }
 
 .PaymentButtonCancel {
@@ -68,7 +99,7 @@
 
 .quantity {
     width: 3rem;
-    height: 2.5rem;
+    height: 5vh;
     text-align: center;
     border: 0;
   }
@@ -76,9 +107,16 @@
 .quantity[type=number]::-webkit-inner-spin-button, .quantity[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
+
+.TableTheadInput {
+    width: 15vh;
+    text-align: center;
+    padding-right: 30px;
+}
   
 .number-input {
     display: flex;
+    align-items: center;
 }
 
 .number-input button {
@@ -88,12 +126,12 @@
     align-items: center;
     justify-content: center;
     width: 2rem;
-    height: 2rem;
+    height: 5vh;
     cursor: pointer;
 }
 
 .ColumnFilter{
-    filter: blur(4px);
+    filter: blur(3px);
 }
 
 .ConfirmationPayment {

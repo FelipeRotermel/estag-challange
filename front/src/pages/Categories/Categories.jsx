@@ -29,7 +29,7 @@ function Categories() {
         <div className="Container">
             <Form/>
             <div className="Column Line">
-                <table className="CategoriesTable">
+                <table className="ProductsTable">
                     <Thead />
                     <Tbody categories={categories} specialChars={specialChars} />
                 </table>

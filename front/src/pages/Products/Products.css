@@ -1,14 +1,38 @@
-.ProductsItemsTable {
-    border-collapse: collapse;
-    border-left: 2px solid white;
-    height: 10%;
+.ProductsTable {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    width: 100%;
 }
 
-.ProductsItemsTable th, .ProductsItemsTable td, .ProductsProductsItemsTable tr td {
-    border-bottom: 1px solid rgba(77, 77, 77, 0.445);
-    border-left: 1px solid rgba(77, 77, 77, 0.445);
-    padding: 10px;
+.ProductsProductsTableThead {
+    background: linear-gradient(90deg, rgb(123, 93, 255), rgb(176, 159, 255));
 }
+
+.ProductsProductsTableThead tr th {
+    height: 5vh;
+    color: #ffffff;
+}
+
+.ProductsProductsTableTbody {
+    border-radius: 0 0 10px 10px;
+    background: #ffffff;
+}
+
+.ProductsProductsTableTbody tr td {
+    height: 5vh;
+}
+
+.ProductsProductsTableTbody tr:nth-of-type(even){
+    background-color: #f3f3f3da;
+    padding: 10px;
+    color: #ffffff;
+    transition: 0.2s;
+    align-items: center;
+}
+
+.ProductsProductsTableTbody tr:hover{
+    background-color: #5e5e5e33;
+}
+
 
 .InputWithButton {
     display: flex;

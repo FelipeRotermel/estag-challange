@@ -16,7 +16,7 @@ function Tbody({products, specialChars}) {
     }
 
     return (
-        <tbody className="ProductsProductsItemsTable">
+        <tbody className="ProductsProductsTableTbody">
             {products.map((product) => {
 
                 /* Verificação de caracteres especiais */
@@ -26,13 +26,13 @@ function Tbody({products, specialChars}) {
 
                 return(
                     <tr key={product.productcode}>
-                        <td className="ID">{product.productcode}</td>
-                        <td className="Item">{product.productname}</td>
-                        <td className="Others">{product.amount}</td>
+                        <td className="TableTbodyCode">{product.productcode}</td>
+                        <td className="TableTbodyItem">{product.productname}</td>
+                        <td className="TableTbodyOthers">{product.amount}</td>
                         <td className="InputWithButton"><input type="number" min={product.amount} /><button onClick={Edit}>Edit</button></td>
-                        <td className='Others'>{product.price}</td>
-                        <td className="Others">{product.categoryname}</td>
-                        <td className="Others">
+                        <td className='TableTbodyOthers'>{product.price}</td>
+                        <td className="TableTbodyOthers">{product.categoryname}</td>
+                        <td className="TableTbodyOthers">
                             <button
                                 className="RemoveButton"
                                 onClick={() => location.href=`http://localhost/routes/products.php?action=delete&code=${product.productcode}`}

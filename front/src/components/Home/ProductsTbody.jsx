@@ -34,7 +34,7 @@ function ProductsTbody({products, specialChars, setCarts}) {
     }
 
     return (
-        <tbody className="HomeProductsItemsTable">
+        <tbody className="HomeProductsTableTbody">
             {products.map((product) => {
 
                 /* Checks if the Product Name has special characters */
@@ -49,13 +49,13 @@ function ProductsTbody({products, specialChars, setCarts}) {
 
                 return(
                     <tr key={product.productcode}>
-                        <td className="ID">{product.productcode}</td>
-                        <td className="Item">{product.productname}</td>
-                        <td className="Others">R$ {product.price}</td>
-                        <td className="Others">{product.tax}</td>
-                        <td className="Others">{product.amount}</td>
-                        <td className="Others">{product.categoryname}</td>
-                        <td className="Others">
+                        <td className="TableTbodyCode">{product.productcode}</td>
+                        <td className="TableTbodyItem">{product.productname}</td>
+                        <td className="TableTbodyOthers">R$ {product.price}</td>
+                        <td className="TableTbodyOthers">{product.tax}</td>
+                        <td className="TableTbodyOthers">{product.amount}</td>
+                        <td className="TableTbodyOthers">{product.categoryname}</td>
+                        <td className="TableTbodyOthers">
                             <button className="AddCart" onClick={AddToCart}>
                                 Add
                             </button>

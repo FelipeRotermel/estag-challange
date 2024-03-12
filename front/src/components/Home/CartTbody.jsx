@@ -41,7 +41,7 @@ function CartTbody({carts, specialChars, setTax, setTotal}) {
     }
 
     return (
-        <tbody className="CartProductsItems">
+        <tbody className="HomeProductsTableTbody">
             {carts.map((cart) => {
                 
             /* Checks if the Cart Name has special characters */
@@ -51,16 +51,16 @@ function CartTbody({carts, specialChars, setTax, setTotal}) {
             
             return (
                 <tr key={cart.id}>
-                    <td className="ID">{cart.id}</td>
-                    <td className="Item">{cart.name}</td>
-                    <td className="Others">{cart.newUnitPrice}</td>
+                    <td className="TableTbodyCode">{cart.id}</td>
+                    <td className="TableTbodyItem">{cart.name}</td>
+                    <td className="TableTbodyOthers">{cart.newUnitPrice}</td>
                     <td className="number-input">
                         <ReduceButton GetCartsAmounts={GetCartsAmounts}/>
                         <input className="quantity" min="1" max={cart.totalAmount} defaultValue={cart.amount} name="quantity" type="number" id="getCartAmount" />
                         <IncreaseButton GetCartsAmounts={GetCartsAmounts}/>
                     </td>
-                    <td className="Others">{cart.category}</td>
-                    <td className="Others">
+                    <td className="TableTbodyOthers">{cart.category}</td>
+                    <td className="TableTbodyOthers">
                         <DeleteButton/>
                     </td>
                 </tr>

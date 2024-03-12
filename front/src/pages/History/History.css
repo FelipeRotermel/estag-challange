@@ -27,7 +27,7 @@
 }
 
 .HistoryTableInfo {
-    background-color: rgb(123, 93, 255);
+    background: linear-gradient(90deg, rgb(123, 93, 255), rgb(176, 159, 255));
 }
 
 .HistoryTableInfo tr {
@@ -97,7 +97,7 @@
 }
 
 .HistoryModalContentHead {
-    background-color: rgb(123, 93, 255);
+    background: linear-gradient(90deg, rgb(123, 93, 255), rgb(176, 159, 255));
 }
 
 .HistoryModalContentHead tr {
@@ -117,11 +117,10 @@
 }
 
 .HistoryModalContentItems tr:nth-of-type(even){
-    background-color: #f3f3f38c;
+    background-color: #f3f3f3da;
     padding: 10px;
     color: #ffffff;
 }
-
 
 .HistoryItem {
     width: 100px;

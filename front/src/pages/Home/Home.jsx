@@ -73,15 +73,15 @@ function Home() {
                     <CartTbody carts={carts} specialChars={specialChars} setTax={setTax} setTotal={setTotal}/>
                 </table>
                 <div className="Payment">
-                    <table>
+                    <table className='PaymentTable'>
                         <thead>
                             <tr>
-                                <td>Tax R$:</td>
-                                <td className="Tax">{tax}</td>
+                                <td><h2>Tax R$:</h2></td>
+                                <td className="Tax"><h2>{tax}</h2></td>
                             </tr>
                             <tr>
-                                <td>Total R$:</td>
-                                <td className="Total">{total}</td>
+                                <td><h2>Total R$:</h2></td>
+                                <td className="Total"><h2>{total}</h2></td>
                             </tr>
                         </thead>
                     </table>

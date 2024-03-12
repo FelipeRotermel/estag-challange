@@ -21,7 +21,6 @@ button {
 }
 
 .Column {
-  float: left;
   width: 50%;
   padding: 10px;
   text-align: center;
@@ -106,15 +105,63 @@ button {
 
 /* Table */
 
-.ID {
-  width: 5vh;
+table {
+  border: 0;
+  border-collapse: collapse;
 }
 
-.Item {
+.TableTheadCode {
+  width: 15vh;
+}
+
+.TableTbodyCode {
+  width: 15vh;
+}
+
+.TableTheadItem {
   width: 70vh;
   text-align: left;
 }
 
-.Others {
-  width: 10vh;
+.TableTbodyItem {
+  width: 70vh;
+  max-width: 100px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.TableTheadOthers {
+  width: 18vh;
+  text-align: start;
+}
+
+.TableTbodyOthers {
+  width: 18vh;
+  text-align: start;
+}
+
+.FilterInput {
+  margin-top: 2px;
+  font-size: 15px;
+  width: 95%;
+  height: 3vh;
+  border: 0;
+  background: transparent;
+  background-image: url(../src/assets/search-10-xxl.png);
+  background-size: 21px;
+  background-position: right;
+  background-repeat: no-repeat;
+  font-weight: bolder;
+  color: white;
+  box-shadow: 0 1.5px 0 0 white;
+}
+
+.FilterInput:focus {
+  outline: none;
+}
+
+.FilterInput::placeholder {
+  color: white;
+  font-size: 16px;
+  font-weight: bolder;
 }

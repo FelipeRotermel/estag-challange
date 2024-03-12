@@ -30,9 +30,9 @@
 .NavBarLink a, .NavBar a {
     text-decoration: none;
     transition: 0.25s;
-    color: black;
+    color: white;
 }
 
 .NavBarLink a:hover, .NavBar a:hover {
-    color: white;
+    color: black;
 }

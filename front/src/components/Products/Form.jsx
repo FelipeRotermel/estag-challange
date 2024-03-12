@@ -7,7 +7,7 @@ function Form({categories, specialChars}) {
                 name="action" 
                 value="post"
             />
-            <input 
+            <input
                 className="TextInput" 
                 placeholder="Product Name"
                 pattern="[a-zA-Z0-9]+"
@@ -17,7 +17,6 @@ function Form({categories, specialChars}) {
                 id="name"
                 required
             />
-            <br/>
             <input 
                 className="TextInput"
                 placeholder="Amount" 

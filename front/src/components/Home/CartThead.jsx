@@ -1,14 +1,14 @@
 function CartThead() {
 
     return (
-        <thead className="ProductsTableItems">
+        <thead className="HomeProductsTableThead">
             <tr>
-                <th className="Others">Code</th>
-                <th className="Item">Product</th>
-                <th className="Others">Price</th>
-                <th className="Others">Amount</th>
-                <th className="Others">Category</th>
-                <th className="Others">Action</th>
+                <th className="TableTheadCode">Code</th>
+                <th className="TableTheadItem">Product</th>
+                <th className="TableTheadOthers">Price</th>
+                <th className="TableTheadInput">Amount</th>
+                <th className="TableTheadOthers">Category</th>
+                <th className="TableTheadOthers">Action</th>
             </tr>
         </thead>
     )

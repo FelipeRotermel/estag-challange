@@ -74,24 +74,6 @@ function Purchase() {
                     <CartThead/>
                     <CartTbody carts={carts} specialChars={specialChars} setTax={setTax} setTotal={setTotal}/>
                 </table>
-                <div className="Payment">
-                    <table>
-                        <thead>
-                            <tr>
-                                <td>Tax R$:</td>
-                                <td className="Tax">{tax}</td>
-                            </tr>
-                            <tr>
-                                <td>Total R$:</td>
-                                <td className="Total">{total}</td>
-                            </tr>
-                        </thead>
-                    </table>
-                    <div className="PaymentButtons">
-                        <DeleteAllProducts/>
-                        <BuyAllProducts carts={carts} total={total} tax={tax}/>
-                    </div>
-                </div>
             </div>
             <div className="ConfirmationPayment">
                 <h1>Are you sure?</h1>
