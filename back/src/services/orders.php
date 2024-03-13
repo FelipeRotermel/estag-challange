@@ -7,7 +7,9 @@ include "../config.php";
         $total = $_REQUEST["total"];
         $tax = $_REQUEST["tax"];
 
-        $ordersPost = $myPDO->prepare("INSERT INTO orders (total, tax) VALUES ('{$total}', '{$tax}')");
+        $ordersPost = $myPDO->prepare("INSERT INTO orders (total, tax) VALUES ( :total, :tax)");
+        $ordersPost->bindParam(':total', $total);
+        $ordersPost->bindParam(':tax', $tax);
         $ordersPost->execute();
     }
 
@@ -28,7 +30,9 @@ include "../config.php";
     /* Get Order Detail */
     function getOrderDetail($myPDO) {
         $orderCode = $_REQUEST["code"];
-        $orderDetail = $myPDO->query("SELECT * FROM order_item INNER JOIN products ON products.code = order_item.product_code WHERE order_code ='{$orderCode}'");
+        $orderDetail = $myPDO->prepare("SELECT * FROM order_item INNER JOIN products ON products.code = order_item.product_code WHERE order_code = :orderCode");
+        $orderDetail->bindParam(':orderCode', $orderCode);
+        $orderDetail->execute();
         $data = $orderDetail->fetchALL();
         return print_r(json_encode($data));
     }
@@ -41,7 +45,12 @@ include "../config.php";
         $price = $_REQUEST["price"];
         $tax = $_REQUEST["tax"];
         
-        $orderItemPost = $myPDO->prepare("INSERT INTO order_item (order_code, product_code, amount, price, tax) VALUES ('{$orderCode}', '{$productCode}', '{$quantity}', '{$price}', '{$tax}')");
+        $orderItemPost = $myPDO->prepare("INSERT INTO order_item (order_code, product_code, amount, price, tax) VALUES (:orderCode, :productCode, :quantity, :price, :tax)");
+        $orderItemPost->bindParam(':orderCode', $orderCode);
+        $orderItemPost->bindParam(':productCode', $productCode);
+        $orderItemPost->bindParam(':quantity', $quantity);
+        $orderItemPost->bindParam(':price', $price);
+        $orderItemPost->bindParam(':tax', $tax);
         $orderItemPost->execute();
     }
 
