@@ -1,7 +1,14 @@
+import { isAuthenticated } from "../../../Auth";
+
 function BuyAllProductsButton({carts, total, tax}) {
 
     /* Buy Products in the Cart */
     function BuyProducts() {
+
+        if(isAuthenticated() == null){
+            location.href = '/login';
+            return;
+        }
 
         /* Check if the Cart is empty */
         if(carts.length == 0) {

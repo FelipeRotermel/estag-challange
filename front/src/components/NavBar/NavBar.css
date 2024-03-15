@@ -3,6 +3,7 @@
     background-color: rgb(123, 93, 255);
     height: 7vh;
     width: 100%;
+    justify-content: flex-start;
     align-items: center;
     position: fixed;
     z-index: 100;
@@ -10,21 +11,39 @@
 
 .NavBarLinks {
     display: inline;
+    width: 83%;
 }
 
-.NavBarLink{
+.NavBarLink {
     display: inline;
     font-size: 20px;
     font-weight: bolder;
     padding: 10px;
 }
 
+.NavBarLinkLogin {
+    display: inline;
+    font-size: 20px;
+    font-weight: bolder;
+    float: right;
+}
+
 .Logo {
     font-size: 40px;
     font-weight: bolder;
     text-decoration: none;
-    padding: 30px;
+    padding: 4vh;
     color: black;
+}
+
+.NavBarLinkLogin button{
+    display: inline;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.25s;
 }
 
 .NavBarLink a, .NavBar a {
@@ -34,5 +53,15 @@
 }
 
 .NavBarLink a:hover, .NavBar a:hover {
+    color: black;
+}
+
+.NavBarLinkLogin a {
+    text-decoration: none;
+    transition: 0.25s;
+    color: white;
+}
+
+.NavBarLinkLogin a:hover, .NavBar a:hover {
     color: black;
 }

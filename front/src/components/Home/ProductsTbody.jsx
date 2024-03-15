@@ -20,9 +20,9 @@ function ProductsTbody({products, specialChars, setCarts}) {
         const cart = { id, name, newUnitPrice, category, amount, totalAmount, tax, totalTax };
         
         /* Check if the Product is already in the Cart */
-        for (let i = 0; i < carts.length; i++) {
+        for (let i=0; i < carts.length; i++) {
             if (carts[i].id == id) {
-                alert("Produto já está no carrinho!")
+                alert("Product already in the Cart!")
                 return;
             }
         }
