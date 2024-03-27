@@ -38,7 +38,6 @@ function Home() {
         TotalPriceAndTax();
     }, [carts]);
 
-
     /* Set TotalPrice and TotalTax */
     function TotalPriceAndTax() {
         let carts = JSON.parse(localStorage.getItem('carts'));
